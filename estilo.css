@@ -1,0 +1,83 @@
+estilo.css
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff6ec;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background: #b33939;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Grade da Home */
+.destaques {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card p {
+    padding: 15px;
+    text-align: center;
+    background: #fff6ec;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #b33939;
+    color: white;
+}
