@@ -1,1 +1,1 @@
-# GastroLatino-Trabalho-de-Programa-o-Frontend
+# GastroLatino-Trabalho-de-Programacao-Frontend
