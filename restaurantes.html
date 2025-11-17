@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,35 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurantes - GastroLatino</title>
     <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
-    <h1>Restaurantes Latino-Americanos</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="receitas.html">Receitas</a>
-        <a href="curiosidades.html">Curiosidades</a>
-        <a href="restaurantes.html">Restaurantes</a>
-        <a href="contatos.html">Contatos</a>
-    </nav>
+    <div class="container">
+        <h1>GastroLatino</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="receitas.html">Receitas</a>
+            <a href="curiosidades.html">Curiosidades</a>
+            <a href="restaurantes.html" class="active">Restaurantes</a>
+            <a href="contatos.html">Contatos</a>
+        </nav>
+    </div>
 </header>
 
-<main>
-    <h2>Recomendações</h2>
-    <p>Alguns dos melhores restaurantes que representam a culinária da América do Sul:</p>
+<main class="container">
+    <section class="page-header">
+        <h2>Restaurantes Latino-Americanos</h2>
+        <p>Descubra os melhores lugares para experimentar a autêntica culinária sul-americana, desde restaurantes premiados até cantinhos tradicionais.</p>
+    </section>
 
-    <ul>
-        <li>Central (Peru)</li>
-        <li>D.O.M (Brasil)</li>
-        <li>Don Julio (Argentina)</li>
-        <li>Oteque (Brasil)</li>
-    </ul>
+    <div class="content-grid">
+        <section class="bloco">
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Central Restaurante - Peru">
+            </div>
+            <div class="content">
+                <h3>Central – Lima, Peru</h3>
+                <div class="restaurant-info">
+                    <p><strong>Chef:</strong> Virgilio Martínez</p>
+                    <p><strong>Especialidade:</strong> Cozinha de altitude peruana</p>
+                    <p><strong>Premiações:</strong> 1ª posição na lista The World's 50 Best Restaurants</p>
+                </div>
+                <p>O Central revoluciona a gastronomia peruana ao explorar ingredientes nativos de diferentes altitudes. Seu menu "Materias Elevaciones" leva os comensais em uma jornada pelos ecossistemas peruanos, desde o fundo do mar até os Andes.</p>
+                <p><strong>Pratos imperdíveis:</strong> Batata colorida com algas, Ceviche de rochas marítimas, Cuy (porquinho-da-índia) com ervas andinas.</p>
+                <p><strong>Endereço:</strong> Santa Isabel 376, Miraflores, Lima</p>
+                <p><strong>Reservas:</strong> Recomendado com 3 meses de antecedência</p>
+            </div>
+        </section>
 
+        <section class="bloco">
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="D.O.M Restaurante - Brasil">
+            </div>
+            <div class="content">
+                <h3>D.O.M – São Paulo, Brasil</h3>
+                <div class="restaurant-info">
+                    <p><strong>Chef:</strong> Alex Atala</p>
+                    <p><strong>Especialidade:</strong> Gastronomia brasileira de autor</p>
+                    <p><strong>Premiações:</strong> 7ª posição na lista The World's 50 Best Restaurants</p>
+                </div>
+                <p>Alex Atala transforma ingredientes brasileiros pouco conhecidos em experiências gastronômicas sofisticadas. O D.O.M (Deo Optimo Maximo) valoriza a biodiversidade brasileira, trazendo para o centro do prato sabores da Amazônia e do cerrado.</p>
+               p><strong>Pratos imperdíveis:</strong> Cupuaçu com foie gras, Língua ao molho de tucupi, Pato no tucupi com jambu.</p>
+                <p><strong>Endereço:</strong> R. Barão de Capanema, 549 - Jardins, São Paulo</p>
+                <p><strong>Destaque:</strong> Uma das maiores adegas da América Latina</p>
+            </div>
+        </section>
+
+        <section class="bloco">
+            <div class="image-container">
+                <img src="https://uploads.dicasargentina.com/sites/32/2016/12/restaurante-don-julio-buenos-aires.png" alt="Don Julio - Argentina">
+            </div>
+            <div class="content">
+                <h3>Don Julio – Buenos Aires, Argentina</h3>
+                <div class="restaurant-info">
+                    <p><strong>Especialidade:</strong> Parrilla tradicional argentina</p>
+                    <p><strong>Premiações:</strong> Melhor restaurante da América Latina 2020</p>
+                    <p><strong>Destaque:</strong> Mais de 30.000 garrafas na adega</p>
+                </div>
+                <p>Considerado o templo da carne argentina, o Don Julio mantém viva a tradição das parrillas portenhas. Localizado em uma casa antiga no bairro de Palermo, o restaurante oferece cortes premium madurados naturalmente e preparados na grelha a carvão.</p>
+                <p><strong>Pratos imperdíveis:</strong> Bife de chorizo, Ojo de bife, Provoleta (queijo grelhado), Empanadas tradicionais.</p>
+                <p><strong>Endereço:</strong> Guatemala 4699, Palermo, Buenos Aires</p>
+                <p><strong>Experiência:</strong> Atmosfera autêntica com decoração rústica</p>
+            </div>
+        </section>
+
+        <section class="bloco">
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Boragó - Chile">
+            </div>
+            <div class="content">
+                <h3>Boragó – Santiago, Chile</h3>
+                <div class="restaurant-info">
+                    <p><strong>Chef:</strong> Rodolfo Guzmán</p>
+                    <p><strong>Especialidade:</strong> Cozinha de produto chileno</p>
+                    <p><strong>Premiações:</strong> 6ª posição na lista Latin America's 50 Best Restaurants</p>
+                </div>
+                <p>O Boragó celebra a biodiversidade chilena através de um menu que muda diariamente conforme a disponibilidade de ingredientes selvagens. O chef Rodolfo Guzmán e sua equipe percorrem o Chile em busca de produtos únicos, desde o deserto do Atacama até a Patagônia.</p>
+                <p><strong>Pratos imperdíveis:</strong> Ervas da cordilheira, Mariscos da costa chilena, Cogumelos silvestres, Endêmica (sobremesa com frutas nativas).</p>
+                <p><strong>Endereço:</strong> Nueva Costanera 3467, Vitacura, Santiago</p>
+                <p><strong>Diferencial:</strong> Mais de 250 ingredientes nativos no cardápio</p>
+            </div>
+        </section>
+    </div>
+
+    <section class="restaurant-guide">
+        <h2>Guia de Experiências Gastronômicas</h2>
+        <div class="guide-grid">
+            <div class="guide-item">
+                <h4>Para Amantes de Carnes</h4>
+                <p>Don Julio (Argentina) e La Cabrera (Argentina) oferecem os melhores cortes. No Brasil, não perca Fogo de Chão e Barbacoa.</p>
+            </div>
+            <div class="guide-item">
+                <h4>Gastronomia de Autor</h4>
+                <p>Central (Peru), D.O.M (Brasil) e Boragó (Chile) são essenciais para quem busca inovação e técnicas avançadas.</p>
+            </div>
+            <div class="guide-item">
+                <h4>Experiências Tradicionais</h4>
+                <p>Para sabores autênticos: La Mar (cevicheria no Peru), Parrilla La Estancia (Uruguai) e Casa do Porco (Brasil).</p>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer>
-    <p>© 2025 GastroLatino</p>
+    <div class="container">
+        <p>© 2025 GastroLatino - Sabores Autênticos da América do Sul</p>
+        <div class="social-links">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="YouTube">YouTube</a>
+        </div>
+    </div>
 </footer>
 
 </body>

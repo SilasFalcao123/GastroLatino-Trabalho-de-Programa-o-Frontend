@@ -1,83 +1,534 @@
-estilo.css
+/* estilo.css - Versão Grená/Vinho */
 
-body {
-    font-family: Arial, sans-serif;
+/* Reset e configurações básicas */
+* {
     margin: 0;
     padding: 0;
-    background: #fff6ec;
-    color: #333;
+    box-sizing: border-box;
+}
+
+/* Variáveis de cores e fontes - Tema Grená/Vinho */
+:root {
+    --primary-color: #800020; /* Grená */
+    --secondary-color: #722f37; /* Vinho */
+    --accent-color: #9d2933; /* Grená mais claro */
+    --dark-color: #2c1810; /* Marrom escuro */
+    --light-color: #f8f4f0; /* Bege claro */
+    --text-color: #333;
+    --text-light: #666;
+    --white: #fff;
+    --shadow: 0 4px 12px rgba(128, 0, 32, 0.15);
+    --transition: all 0.3s ease;
+}
+
+/* Tipografia */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Container para centralizar conteúdo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Cabeçalho */
 header {
-    background: #b33939;
-    padding: 20px;
-    text-align: center;
-    color: white;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 1.5rem 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: var(--white);
+    margin-bottom: 0;
+    font-size: 2rem;
 }
 
 nav a {
-    color: white;
-    margin: 0 15px;
+    color: var(--white);
     text-decoration: none;
-    font-weight: bold;
+    margin: 0 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: var(--transition);
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav a:hover, nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Grade da Home */
+/* Conteúdo principal */
+main {
+    padding: 3rem 0;
+    min-height: calc(100vh - 160px);
+}
+
+/* Hero Section */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+.hero-image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Botões */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-color);
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+
+.page-header h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.page-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.page-header p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+/* Grade de conteúdo */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+/* Blocos de conteúdo */
+.bloco {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.bloco:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(128, 0, 32, 0.2);
+}
+
+.image-container {
+    overflow: hidden;
+    height: 300px;
+}
+
+.bloco img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.bloco:hover img {
+    transform: scale(1.05);
+}
+
+.content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.content p {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.content ul, .content ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Informações de receita e restaurante */
+.recipe-info, .restaurant-info {
+    background-color: var(--light-color);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.recipe-info strong, .restaurant-info strong {
+    color: var(--primary-color);
+}
+
+/* Seção de destaques */
+.destaques-section {
+    margin: 4rem 0;
+}
+
 .destaques {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    padding: 25px;
-    max-width: 1200px;
-    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
+/* Cards */
 .card {
-    background: #ffffff;
-    border-radius: 14px;
+    background: var(--white);
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: 0.3s ease;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(128, 0, 32, 0.2);
 }
 
 .card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    transition: var(--transition);
 }
 
-.card p {
-    padding: 15px;
-    text-align: center;
-    background: #fff6ec;
+.card:hover img {
+    transform: scale(1.05);
 }
 
-/* Formulário */
-form {
+.card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    width: 300px;
 }
 
-input, textarea {
-    margin-bottom: 10px;
-    padding: 10px;
+.card-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Newsletter */
+.newsletter {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.newsletter h2 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.newsletter p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.newsletter-form input {
+    flex-grow: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Guia de restaurantes */
+.restaurant-guide {
+    margin: 4rem 0;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.guide-item {
+    padding: 1.5rem;
+    background-color: var(--light-color);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.guide-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
 }
 
 /* Rodapé */
 footer {
+    background-color: var(--dark-color);
+    color: var(--white);
+    padding: 2rem 0;
     text-align: center;
-    padding: 15px;
-    background: #b33939;
-    color: white;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Formulário de contato */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+form label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+form input, form textarea {
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    transition: var(--transition);
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(128, 0, 32, 0.2);
+}
+
+form button {
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+form button:hover {
+    background: var(--secondary-color);
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .bloco {
+        flex-direction: row;
+    }
+    
+    .image-container {
+        width: 40%;
+        height: auto;
+    }
+    
+    .content {
+        width: 60%;
+    }
+}
+
+@media (max-width: 767px) {
+    header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    nav a {
+        margin: 0.25rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
 }

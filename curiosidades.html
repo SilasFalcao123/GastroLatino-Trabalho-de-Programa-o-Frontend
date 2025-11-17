@@ -1,4 +1,4 @@
-
+curiosidades.html
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -7,33 +7,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curiosidades - GastroLatino</title>
     <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
-    <h1>Curiosidades Culinárias</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="receitas.html">Receitas</a>
-        <a href="curiosidades.html">Curiosidades</a>
-        <a href="restaurantes.html">Restaurantes</a>
-        <a href="contatos.html">Contatos</a>
-    </nav>
+    <div class="container">
+        <h1>GastroLatino</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="receitas.html">Receitas</a>
+            <a href="curiosidades.html" class="active">Curiosidades</a>
+            <a href="restaurantes.html">Restaurantes</a>
+            <a href="contatos.html">Contatos</a>
+        </nav>
+    </div>
 </header>
 
-<main>
-    <h2>Histórias e Tradições</h2>
-    <p>Descubra curiosidades sobre a culinária sul-americana:</p>
+<main class="container">
+    <section class="page-header">
+        <h2>Curiosidades Culinárias da América Latina</h2>
+        <p>Descubra fatos interessantes, histórias e tradições que fazem da culinária latino-americana uma das mais ricas e diversificadas do mundo.</p>
+    </section>
 
-    <ul>
-        <li>O Ceviche é considerado patrimônio cultural do Peru.</li>
-        <li>A mandioca é uma das bases alimentares mais antigas do continente.</li>
-        <li>O Chimarrão é símbolo cultural no Brasil, Uruguai e Argentina.</li>
-    </ul>
+    <div class="content-grid">
+        <section class="bloco">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Aipim%2C_ou_mandioca%2C_do_tupi_mani%27oka_01.jpg/330px-Aipim%2C_ou_mandioca%2C_do_tupi_mani%27oka_01.jpg" alt="Mandioca">
+            </div>
+            <div class="content">
+                <h3>A mandioca: o pão dos trópicos</h3>
+                <p>A mandioca é um dos alimentos mais versáteis e importantes da América Latina. Conhecida como "pão dos trópicos", é consumida de diversas formas: cozida, frita (como farofa), em forma de tapioca ou como base para bebidas fermentadas. Curiosamente, a mandioca contém ácido cianídrico em sua forma natural, sendo necessário processá-la adequadamente antes do consumo.</p>
+                <p>Originária da América do Sul, a mandioca foi domesticada há cerca de 10.000 anos e hoje é cultivada em mais de 100 países, sendo o Brasil um dos maiores produtores mundiais.</p>
+            </div>
+        </section>
+
+        <section class="bloco">
+            <div class="image-container">
+                <img src="https://www.comidaereceitas.com.br/wp-content/uploads/2010/02/chimarrao-ou-mate-780x1170.jpg" alt="Chimarrão">
+            </div>
+            <div class="content">
+                <h3>Chimarrão: o ritual da amizade</h3>
+                <p>Mais do que uma bebida, o chimarrão é um ritual social profundamente enraizado na cultura do sul do Brasil, Argentina, Uruguai e Paraguai. A cuia com a erva-mate é compartilhada entre amigos e familiares em rodas de conversa, simbolizando hospitalidade e união.</p>
+                <p>O preparo tradicional segue regras específicas: a água não pode ferver (deve ficar entre 70-80°C), a cuia deve ser preenchida com 2/3 de erva-mate, e a bomba deve ficar fixa após inserida. Cada região tem suas variações - no Uruguai, por exemplo, é comum tomar mate enquanto se caminha pelas ruas.</p>
+            </div>
+        </section>
+
+        <section class="bloco">
+            <div class="image-container">
+                <img src="https://revistapesquisa.fapesp.br/wp-content/uploads/2019/01/SITE_Milho-1300px-2.jpg" alt="Milho">
+            </div>
+            <div class="content">
+                <h3>Milho: o verdadeiro ancestral</h3>
+                <p>O milho é um dos pilares da alimentação latino-americana há milênios. Domesticado há cerca de 9.000 anos no México, era considerado sagrado por civilizações como os maias e astecas, que o chamavam de "sangue da terra".</p>
+                <p>Na culinária contemporânea, o milho aparece em diversas preparações: das tortillas mexicanas à pamonha brasileira, da arepa venezuelana à humita argentina. Curiosamente, existem mais de 60 variedades de milho apenas no México, cada uma com características e usos específicos.</p>
+            </div>
+        </section>
+
+        <section class="bloco">
+            <div class="image-container">
+                <img src="https://cdn.awsli.com.br/2500x2500/998/998380/produto/36725287/18472f9eb9.jpg" alt="Pimentas">
+            </div>
+            <div class="content">
+                <h3>As pimentas que conquistaram o mundo</h3>
+                <p>As pimentas são originárias das Américas e foram levadas para a Europa por Cristóvão Colombo. Hoje, são ingredientes fundamentais em diversas cozinhas latino-americanas, cada região com suas preferências:</p>
+                <ul>
+                    <li><strong>México:</strong> Jalapeño, Serrano e Habanero</li>
+                    <li><strong>Peru:</strong> Ají Amarillo e Rocoto</li>
+                    <li><strong>Brasil:</strong> Malagueta, Cumari e Biquinho</li>
+                    <li><strong>Caribe:</strong> Scotch Bonnet</li>
+                </ul>
+                <p>A capsaicina, composto químico responsável pela ardência das pimentas, tem propriedades analgésicas e é usada em medicamentos.</p>
+            </div>
+        </section>
+
+        <section class="bloco">
+            <div class="image-container">
+                <img src="https://www.estadao.com.br/resizer/v2/POPOAJSHYVBSJBQLKIEEHI5AU4.jpeg?quality=80&auth=ff9a5dd9ab38ece038b0ee73c4b1fa290e17d282ed93f2dfd6939908d8d8b532&width=1200" alt="Cozinha tradicional">
+            </div>
+            <div class="content">
+                <h3>Técnicas ancestrais de preparo</h3>
+                <p>Muitas técnicas culinárias utilizadas hoje têm origem em práticas ancestrais dos povos indígenas da América Latina:</p>
+                <ul>
+                    <li><strong>Nixtamalização:</strong> Processo de cozimento do milho com cal, desenvolvido pelos mesoamericanos, que aumenta o valor nutricional e facilita a moagem</li>
+                    <li><strong>Pachamanca:</strong> Técnica peruana de cozimento em buracos no chão, usando pedras quentes</li>
+                    <li><strong>Barbacoa:</strong> Método de cozimento lento em fogo baixo, originário do Caribe</li>
+                    <li><strong>Moqueca:</strong> Técnica brasileira de cozimento em panela de barro com azeite de dendê</li>
+                </ul>
+            </div>
+        </section>
+    </div>
 </main>
 
 <footer>
-    <p>© 2025 GastroLatino</p>
+    <div class="container">
+        <p>© 2025 GastroLatino - Explorando os sabores da América Latina</p>
+        <div class="social-links">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="YouTube">YouTube</a>
+        </div>
+    </div>
 </footer>
 
 </body>
